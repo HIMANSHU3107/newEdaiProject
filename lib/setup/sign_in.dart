@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:new_edai_project/home/home.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -40,7 +41,15 @@ class _LoginPageState extends State<LoginPage> {
                 obscureText: true,
               ),
               RaisedButton(
-                onPressed: signIn,
+                onPressed: () {
+                  Future<String> userid = signIn();
+                  if (userid != null) {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) => Home()));
+                  } else {
+                    print('Could not login with given credentials');
+                  }
+                },
                 child: Text('Sign in'),
               ),
             ],
@@ -48,12 +57,14 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  void signIn() async {
+  Future<String> signIn() async {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
       try {
-        UserCredential user = await FirebaseAuth.instance
+        UserCredential result = await FirebaseAuth.instance
             .signInWithEmailAndPassword(email: _email, password: _password);
+        User user = result.user;
+        return user.uid;
       } catch (e) {
         print(e.message);
       }
