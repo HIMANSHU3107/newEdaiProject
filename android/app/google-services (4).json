@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "524093895254",
+    "firebase_url": "https://newedaiproject.firebaseio.com",
+    "project_id": "newedaiproject",
+    "storage_bucket": "newedaiproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524093895254:android:556bea83a1e5613000c1f7",
+        "android_client_info": {
+          "package_name": "com.example.new_edai_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524093895254-gg6mi6bg90d6itfvf66r7km7bca07i47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwB-TERAcrj8EWAEw2ve-N4GKhVgy_1qM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524093895254-gg6mi6bg90d6itfvf66r7km7bca07i47.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
