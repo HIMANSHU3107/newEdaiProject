@@ -71,7 +71,6 @@ flutter:
           weight: 500
         - asset: assets/fonts/JosefinSans-Bold.ttf
           weight: 700
-
   # fonts:
   #   - family: Schyler
   #     fonts:
