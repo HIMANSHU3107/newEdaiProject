@@ -30,7 +30,7 @@ class Meditation extends StatelessWidget {
                         Text("Good Morning",
                             style: TextStyle(
                               fontFamily: "Josefin",
-                              fontSize: 35,
+                              fontSize: 38,
                               fontWeight: FontWeight.bold,
                             )),
                         CircleAvatar(
@@ -61,7 +61,7 @@ class Meditation extends StatelessWidget {
                                 "Let's focus on the new day ",
                                 style: TextStyle(
                                   fontFamily: "Josefin",
-                                  fontSize: 20,
+                                  fontSize: 23,
                                 ),
                               ),
                               Text("~"),
