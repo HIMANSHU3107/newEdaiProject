@@ -10,6 +10,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   String _email, _password;
+  String error = '';
 
   @override
   Widget build(BuildContext context) {
@@ -42,31 +43,36 @@ class _LoginPageState extends State<LoginPage> {
               ),
               RaisedButton(
                 onPressed: () {
-                  Future<String> userid = signIn();
-                  if (userid != null) {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => Home()));
-                  } else {
-                    print('Could not login with given credentials');
-                  }
+                  signIn();
                 },
                 child: Text('Sign in'),
+              ),
+              SizedBox(height: 12.0),
+              Text(
+                error,
+                style: TextStyle(color: Colors.red, fontSize: 14.0),
               ),
             ],
           )),
     );
   }
 
-  Future<String> signIn() async {
+  void signIn() async {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
       try {
         UserCredential result = await FirebaseAuth.instance
             .signInWithEmailAndPassword(email: _email, password: _password);
         User user = result.user;
-        return user.uid;
+        print(user.uid);
+        if (user.uid != null) {
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => Home()));
+        }
       } catch (e) {
-        print(e.message);
+        setState(() {
+          error = 'could not sign in with those credentials';
+        });
       }
     }
   }
