@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:new_edai_project/features/audioplayer.dart';
 
-class Exercise extends StatefulWidget {
-  @override
-  _ExerciseState createState() => _ExerciseState();
-}
-
-class _ExerciseState extends State<Exercise> {
+class Exercise extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Excercise App'),
+        title: Text('Exercise'),
+      ),
+      body: Container(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => Audioplayer()));
+          },
+          child: Text('Audio Player'),
+        ),
+        alignment: Alignment.center,
       ),
     );
   }
