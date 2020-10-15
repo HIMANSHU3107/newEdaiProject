@@ -46,7 +46,7 @@ class Modes extends StatelessWidget {
                           modeName,
                           style: TextStyle(
                             fontFamily: "josefin",
-                            fontSize: 16,
+                            fontSize: 22,
                           ),
                         ),
                       ),
