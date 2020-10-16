@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'PromoIcons.dart';
 import 'Modes.dart';
+import 'Focus_mode.dart';
 
 class Meditation extends StatelessWidget {
   @override
@@ -82,16 +83,20 @@ class Meditation extends StatelessWidget {
                         child: Column(
                           children: [
                             Modes(
-                                background: Color(0xffffb773),
-                                flexSize: 4,
-                                mgTop: 30,
-                                mgLeft: 30,
-                                mgRight: 10,
-                                mgBottom: 10,
-                                modeName: "Focus Mode",
-                                assetImage: "assets/images/coltri.png",
-                                buttonAsset: "assets/images/triangle.png",
-                                openMode: null),
+                              background: Color(0xffffb773),
+                              flexSize: 4,
+                              mgTop: 30,
+                              mgLeft: 30,
+                              mgRight: 10,
+                              mgBottom: 10,
+                              modeName: "Focus Mode",
+                              assetImage: "assets/images/coltri.png",
+                              buttonAsset: "assets/images/triangle.png",
+                              openMode: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (ctx) => FocusMode())),
+                            ),
                             Modes(
                               background: Color(0xffcf8cf9),
                               flexSize: 6,
