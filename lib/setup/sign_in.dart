@@ -15,46 +15,75 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(),
-      body: Form(
+        backgroundColor: Color(0xff392850),
+        appBar: new AppBar(
+          backgroundColor: Color(0xff392850),
+        ),
+        body: Form(
           key: _formKey,
-          child: Column(
-            children: <Widget>[
-              TextFormField(
-                validator: (input) {
-                  if (input.isEmpty) {
-                    return 'Provide an email';
-                  }
-                  return null;
-                },
-                decoration: InputDecoration(labelText: 'Email'),
-                onSaved: (input) => _email = input,
-              ),
-              TextFormField(
-                validator: (input) {
-                  if (input.length < 6) {
-                    return 'Longer password please';
-                  }
-                  return null;
-                },
-                decoration: InputDecoration(labelText: 'Password'),
-                onSaved: (input) => _password = input,
-                obscureText: true,
-              ),
-              RaisedButton(
-                onPressed: () {
-                  signIn();
-                },
-                child: Text('Sign in'),
-              ),
-              SizedBox(height: 12.0),
-              Text(
-                error,
-                style: TextStyle(color: Colors.red, fontSize: 14.0),
-              ),
-            ],
-          )),
-    );
+          child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 60,
+                  ),
+                  TextFormField(
+                    validator: (input) {
+                      if (input.isEmpty) {
+                        return 'Provide an email';
+                      }
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                        labelText: 'Email',
+                        fillColor: Colors.white,
+                        filled: true),
+                    onSaved: (input) => _email = input,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextFormField(
+                    validator: (input) {
+                      if (input.length < 6) {
+                        return 'Longer password please';
+                      }
+                      return null;
+                    },
+                    style: TextStyle(color: Color(0xff392850)),
+                    decoration: InputDecoration(
+                      labelText: 'Password',
+                      fillColor: Colors.white,
+                      filled: true,
+                    ),
+                    onSaved: (input) => _password = input,
+                    obscureText: true,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ButtonTheme(
+                      height: 40,
+                      minWidth: 120,
+                      buttonColor: Colors.white,
+                      child: RaisedButton(
+                        onPressed: () {
+                          signIn();
+                        },
+                        child: Text(
+                          'Sign in',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      )),
+                  SizedBox(height: 12.0),
+                  Text(
+                    error,
+                    style: TextStyle(color: Colors.red, fontSize: 14.0),
+                  ),
+                ],
+              )),
+        ));
   }
 
   void signIn() async {

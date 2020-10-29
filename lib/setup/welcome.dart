@@ -11,24 +11,51 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('My firebase app'),
-      ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          RaisedButton(
-            onPressed: navigateToSignIn,
-            child: Text('Sign in'),
+        appBar: AppBar(
+          backgroundColor: Color(0xff392850),
+          title: Text('Health Fitness'),
+          automaticallyImplyLeading: false,
+        ),
+        backgroundColor: Color(0xff392850),
+        body: Container(
+          padding: EdgeInsets.symmetric(horizontal: 100),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              SizedBox(
+                height: 150,
+              ),
+              SizedBox(
+                  height: 50,
+                  child: RaisedButton(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5)),
+                    elevation: 20,
+                    onPressed: navigateToSignIn,
+                    child: Text(
+                      'Sign in',
+                      style: TextStyle(fontSize: 22),
+                    ),
+                  )),
+              SizedBox(
+                height: 20,
+              ),
+              SizedBox(
+                height: 50,
+                child: RaisedButton(
+                  elevation: 20,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5)),
+                  onPressed: navigateToSignUp,
+                  child: Text(
+                    'Sign up',
+                    style: TextStyle(fontSize: 22),
+                  ),
+                ),
+              ),
+            ],
           ),
-          RaisedButton(
-            onPressed: navigateToSignUp,
-            child: Text('Sign up'),
-          ),
-        ],
-      ),
-    );
+        ));
   }
 
   void navigateToSignIn() {

@@ -14,39 +14,65 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(),
-      body: Form(
+        appBar: new AppBar(
+          backgroundColor: Color(0xff392850),
+        ),
+        backgroundColor: Color(0xff392850),
+        body: Form(
           key: _formKey,
-          child: Column(
-            children: <Widget>[
-              TextFormField(
-                validator: (input) {
-                  if (input.isEmpty) {
-                    return 'Provide an email';
-                  }
-                  return null;
-                },
-                decoration: InputDecoration(labelText: 'Email'),
-                onSaved: (input) => _email = input,
-              ),
-              TextFormField(
-                validator: (input) {
-                  if (input.length < 6) {
-                    return 'Longer password please';
-                  }
-                  return null;
-                },
-                decoration: InputDecoration(labelText: 'Password'),
-                onSaved: (input) => _password = input,
-                obscureText: true,
-              ),
-              RaisedButton(
-                onPressed: signUp,
-                child: Text('Sign up'),
-              ),
-            ],
-          )),
-    );
+          child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 60),
+              child: Column(
+                children: <Widget>[
+                  TextFormField(
+                    validator: (input) {
+                      if (input.isEmpty) {
+                        return 'Provide an email';
+                      }
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                        labelText: 'Email',
+                        fillColor: Colors.white,
+                        filled: true),
+                    onSaved: (input) => _email = input,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextFormField(
+                    validator: (input) {
+                      if (input.length < 6) {
+                        return 'Longer password please';
+                      }
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                        labelText: 'Password',
+                        fillColor: Colors.white,
+                        filled: true),
+                    onSaved: (input) => _password = input,
+                    obscureText: true,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ButtonTheme(
+                    height: 40,
+                    minWidth: 120,
+                    buttonColor: Colors.white,
+                    child: RaisedButton(
+                      elevation: 20,
+                      onPressed: signUp,
+                      child: Text(
+                        'Sign up',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ),
+                  ),
+                ],
+              )),
+        ));
   }
 
   void signUp() async {

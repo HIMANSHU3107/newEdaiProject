@@ -9,6 +9,7 @@ class Home extends StatelessWidget {
     return Scaffold(
         backgroundColor: Color(0xff392850),
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           actions: [
             FlatButton.icon(
                 onPressed: null,
