@@ -1,9 +1,11 @@
-import 'package:new_edai_project/features/chatbot.dart';
+import 'package:new_edai_project/features/chatbot/chatbot.dart';
 import 'package:new_edai_project/features/excercise.dart';
 import 'package:new_edai_project/features/Meditation/meditation.dart';
 import 'package:flutter/material.dart';
+import 'package:new_edai_project/setup/user.dart';
 
 class Home extends StatelessWidget {
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +14,9 @@ class Home extends StatelessWidget {
           automaticallyImplyLeading: false,
           actions: [
             FlatButton.icon(
-                onPressed: null,
+                onPressed: () async {
+                  await _auth.signOut();
+                },
                 icon: Icon(
                   Icons.person,
                   color: Colors.white,
