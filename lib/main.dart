@@ -1,8 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:new_edai_project/home/home.dart';
 import 'package:new_edai_project/setup/user.dart';
-import 'package:new_edai_project/setup/welcome.dart';
 import 'package:new_edai_project/setup/wrapper.dart';
 import 'package:provider/provider.dart';
 

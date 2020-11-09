@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "newedaiproject",
+  "private_key_id": "9558dabadbe52b35f1bd3dbb20d8cbaa7521c94d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDo4TfAjw0FyTRw\nlKVI8/Zsr/O5mALLJ2GfXR93l1FaYPBpQXhostRg0qn+r2NwR7E11cAl+Tfo8nwa\nrIfh59PiDFbtZWhGkuZsXO4W9rt8F3w85tjcWmMocU3zwYfsj3zxy4tD7S07uAdG\nOICB2M0Ek8Q7z6maf/xB6j5Bx0o/+dMCA46ppfeNvIDgNlOAVz6xUjgus59rulgZ\npy5GitvVE28V2hkKHBAEomzvBsOJlAZMU3b4/pathEHTZFiizh7Aqn7wVvJV3aMb\na3W8ae795zpQWn9kXL2ipaCZBoCZPhNIMu6OeDNUoyeP8une5gw1UkU1+gaFxxT9\n4HHiCxvPAgMBAAECggEAbJ/IqpfPIjjErhKXuhyZf/7ed15RR0NaRMRiDh1VxAtd\neCsip+tqJrN8uaBDiLbYEN1gIBZMHuskOijpxNSmv1S0I01ewzR4KGl8YNe7gdlO\niPXAh5/dipq3GpDV/uC7Dem8TvXNWIKxWe62+loO3yixqphlavxxxKknWvVDS+0u\nyWMvXbDeOs6p+vLqC36+YLKyQAInGbRkertkU6n4lsJqYm4pWG/NkURHagvDK3B7\nFaxwdiAemrqfe+HklTHbznXg00hSTo/l9k+LldOJ/33GL0NjTczJlSHXotLJbvnQ\nrL3n5vQIvulAN5pSsZtkmID0nnewo0MjUE4nJHKfCQKBgQD5xaF2HkeAIaP69XWm\nY1o2Hw3FgIIRxVsTNHLSgm+jid2mqHo+5khfsGJpWg34UvLo6sR6a1h2FJPzWh+j\ns6pBArcZY/H4RXLoj5vRr+e3tqAusRpBjIDCT13Kk0IMj9lFWoaiVIkXGmwTGVwb\nY/CZIoTZHqeKkakJs/VN9soTJQKBgQDur8JFSlbN80T6CoBRed8pp8F2gG6TzmxZ\nOkHKaNA9rCc6EgmfLbDZ0Na3Opnmi8rkB/9N3W2LCd3sOEmaGf0b5zkR8ciC2qjH\nghNf5wggJ/vjEovVWmAE7FRQ4zgT6oxkwb5ywjAIKZ3vNvaomDw8yE6BdZMXscsQ\nk+UZOmL64wKBgQD1cUjN+slGV0h9p1G6dO1EO9XbnAG1Ftv9jk+7H2Q3L5Y5XFvs\njXzXU0wRvOX3fQOo8HKs3emq92PAAnMO+dG3WsS01asEzrIxaFW1g4dP182mtHBZ\ns4kf6MAA/h4sm/rlFSUyRaIFqvhC+Guzmszmnq4vcdkv6R1UJJxMxdQjZQKBgQCI\nCkL2zTUGczYIMX4LciPgkQ2yJedgdRHKFWs0G2M9E2bUMT2srRUUQHRwwITBI0ID\nkA9SaPcrfPcw0LAald9uTO55LM50zn3OIHQ8f+hgs4lcVdC/TKBXjf9MjwUCTPex\n4b9TlxxbOqUal8AkPYhvuFcOcF3i7mHn0/OK2n1ZswKBgBSZl/hbdPbrTDQweded\nuUjHAJIMx9xkNsrikVje0XkAnGJjHgxR2ui20Pa586MQIhiCWb3TNxZlq4JrmijE\nhRWpmfnyS7rV4XVO1YlPK+IJf/OW0/3a/Y+B8yn5cIgWfjVzAxb/rXEzVfTE7fV2\nCYFkVVACesQ7sHbwcwLj+HLI\n-----END PRIVATE KEY-----\n",
+  "client_email": "health-chatbot@newedaiproject.iam.gserviceaccount.com",
+  "client_id": "106634141435014035072",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/health-chatbot%40newedaiproject.iam.gserviceaccount.com"
+}
