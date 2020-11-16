@@ -5,11 +5,11 @@ class Chatbot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Facts',
+      title: 'Health-Bot',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.green,
-        accentColor: Colors.green,
+        primarySwatch: Colors.purple,
+        accentColor: Colors.purple,
       ),
       home: FlutterFactsChatBot(),
     );

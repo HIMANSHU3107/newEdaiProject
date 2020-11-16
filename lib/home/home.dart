@@ -134,7 +134,8 @@ class Home extends StatelessWidget {
                         child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
                             child: Image(
-                              image: AssetImage('assets/images/chatbot.png'),
+                              image:
+                                  AssetImage('assets/images/chatbot-icon.jpg'),
                               height: 60,
                             )),
                       ),

@@ -38,7 +38,7 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
               child: IconButton(
                   icon: Icon(
                     Icons.send,
-                    color: Colors.green[400],
+                    color: Color(0xff392850),
                   ),
                   onPressed: () => _submitQuery(_textController.text)),
             ),
@@ -71,7 +71,7 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
     _textController.clear();
     Facts message = new Facts(
       text: text,
-      name: "User",
+      name: "Me",
       type: true,
     );
     setState(() {
@@ -86,11 +86,11 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "Flutter Facts",
-          style: TextStyle(color: Colors.green[400]),
+          "Health-Bot",
+          style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.white,
-        elevation: 0,
+        backgroundColor: Color(0xff392850),
+        elevation: 15,
       ),
       body: Column(children: <Widget>[
         Flexible(

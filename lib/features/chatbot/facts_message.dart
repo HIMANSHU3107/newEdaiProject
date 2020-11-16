@@ -12,12 +12,10 @@ class Facts extends StatelessWidget {
       Container(
         margin: const EdgeInsets.only(right: 10.0),
         child: CircleAvatar(
-          child: Padding(
-            padding: const EdgeInsets.all(5),
-            child: FlutterLogo(),
-          ),
+          child: new Image(
+              image: new AssetImage("assets/images/chatbot-icon.jpg")),
           backgroundColor: Colors.grey[200],
-          radius: 12,
+          radius: 14,
         ),
       ),
       Expanded(
@@ -27,13 +25,15 @@ class Facts extends StatelessWidget {
 //            Text(this.name,
 //                style: TextStyle(fontWeight: FontWeight.bold)),
             Card(
+                margin: const EdgeInsets.only(right: 80.0),
                 elevation: 3,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(20))),
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Text(
                     text,
+                    style: TextStyle(fontSize: 18),
                   ),
                 )),
           ],
@@ -50,14 +50,14 @@ class Facts extends StatelessWidget {
           children: <Widget>[
 //            Text(this.name, style: Theme.of(context).textTheme.subhead),
             Card(
-                color: Colors.green[400],
+                color: Color(0xffcf8cf9),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(20))),
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(10.0),
                   child: Text(
                     text,
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 )),
           ],
@@ -66,8 +66,11 @@ class Facts extends StatelessWidget {
       Container(
         margin: const EdgeInsets.only(left: 10.0),
         child: CircleAvatar(
-          child: new Text(this.name[0]),
-          backgroundColor: Colors.grey[200],
+          child: new Text(
+            this.name,
+            style: TextStyle(fontSize: 12),
+          ),
+          backgroundColor: Color(0xff392850),
           radius: 12,
         ),
       ),
