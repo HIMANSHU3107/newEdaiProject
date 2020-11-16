@@ -3,9 +3,23 @@ import 'package:new_edai_project/features/excercise.dart';
 import 'package:new_edai_project/features/Meditation/meditation.dart';
 import 'package:flutter/material.dart';
 import 'package:new_edai_project/setup/user.dart';
+import 'package:kommunicate_flutter_plugin/kommunicate_flutter_plugin.dart';
 
 class Home extends StatelessWidget {
   final AuthService _auth = AuthService();
+  final String APP_ID = 'ed0626d303d5d2e5074d2cc4e092cd19';
+
+  void buildConversation() {
+    dynamic conversationObject = {'appId': APP_ID};
+
+    KommunicateFlutterPlugin.buildConversation(conversationObject)
+        .then((result) {
+      // print("Conversation builder success : " + result.toString());
+    }).catchError((error) {
+      //print("Conversation builder error occurred : " + error.toString());
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -116,9 +130,10 @@ class Home extends StatelessWidget {
               height: 20,
             ),
             GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
+              /*onTap: () => Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => Chatbot(),
-              )),
+              )),*/
+              onTap: () => {buildConversation()},
               child: SizedBox(
                 height: 80,
                 child: Card(

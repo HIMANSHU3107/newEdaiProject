@@ -35,6 +35,7 @@ dependencies:
   audioplayers: ^0.16.1
   flutter_dialogflow: ^0.1.0
   provider: ^4.3.2+2
+  kommunicate_flutter_plugin: ^1.1.0
 
 dev_dependencies:
   flutter_test:
