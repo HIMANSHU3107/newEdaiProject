@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:new_edai_project/features/exerciseSecond.dart';
+
 // import 'package:new_edai_project/features/audioplayer.dart';
 
 class Exercise extends StatelessWidget {
@@ -91,7 +93,10 @@ class ReusableCard extends StatelessWidget {
             color: Colors.white,
             textColor: Color(0xff392850),
             onPressed: () {
-              // Perform some action
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ExerciseSecond()),
+              ); // Perform some action
             },
             child: const Text('START'),
           ),
