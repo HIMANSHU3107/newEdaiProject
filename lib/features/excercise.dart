@@ -8,10 +8,10 @@ class Exercise extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff392850),
+        backgroundColor: Color(0xff0D0620),
         title: Text('Exercise'),
       ),
-      backgroundColor: Color(0xff392850),
+      backgroundColor: Color(0xff0D0620),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -64,7 +64,7 @@ class ReusableCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(20.0),
+      margin: EdgeInsets.only(top: 20.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
       color: Colors.transparent,
       clipBehavior: Clip.antiAlias,

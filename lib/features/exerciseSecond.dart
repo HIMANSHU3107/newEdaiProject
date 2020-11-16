@@ -10,12 +10,12 @@ class _ExerciseSecondState extends State<ExerciseSecond> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff392850),
+        backgroundColor: Color(0xff0D0620),
         title: Text('Exercise'),
       ),
       body: Container(
         decoration: BoxDecoration(
-          color: const Color(0xff392850),
+          color: const Color(0xff232323),
           image: new DecorationImage(
               fit: BoxFit.cover,
               colorFilter: new ColorFilter.mode(
@@ -54,7 +54,7 @@ class SecondReusableCard extends StatelessWidget {
         color: Colors.white,
         height: 60.0,
         minWidth: double.infinity,
-        textColor: Color(0xff392850),
+        textColor: Color(0xff0D0620),
         onPressed: () {
           // Perform some action
         },
