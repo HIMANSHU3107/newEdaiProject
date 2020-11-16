@@ -56,12 +56,15 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
     Dialogflow dialogFlow =
         Dialogflow(authGoogle: authGoogle, language: Language.english);
     AIResponse response = await dialogFlow.detectIntent(query);
+
     Facts message = Facts(
       text: response.getMessage() ??
           CardDialogflow(response.getListMessage()[0]).title,
+      // imageUri: CardDialogflow(response.getListMessage()[0]).imageUri ?? "",
       name: "Flutter",
       type: false,
     );
+
     setState(() {
       messageList.insert(0, message);
     });

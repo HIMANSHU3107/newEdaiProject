@@ -4,6 +4,7 @@ class Facts extends StatelessWidget {
   Facts({this.text, this.name, this.type});
 
   final String text;
+  //final String imageUri;
   final String name;
   final bool type;
 
@@ -25,17 +26,23 @@ class Facts extends StatelessWidget {
 //            Text(this.name,
 //                style: TextStyle(fontWeight: FontWeight.bold)),
             Card(
-                margin: const EdgeInsets.only(right: 80.0),
-                elevation: 3,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text(
+              margin: const EdgeInsets.only(right: 80.0),
+              elevation: 3,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20))),
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(children: <Widget>[
+                  Text(
                     text,
                     style: TextStyle(fontSize: 18),
                   ),
-                )),
+                  /*imageUri != ""
+                      ? Image.network('https://picsum.photos/250?image=9')
+                      : null,*/
+                ]),
+              ),
+            ),
           ],
         ),
       ),
