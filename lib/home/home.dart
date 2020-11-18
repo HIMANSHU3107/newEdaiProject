@@ -130,10 +130,10 @@ class Home extends StatelessWidget {
               height: 20,
             ),
             GestureDetector(
-              /*onTap: () => Navigator.of(context).push(MaterialPageRoute(
+              onTap: () => Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => Chatbot(),
-              )),*/
-              onTap: () => {buildConversation()},
+              )),
+              //onTap: () => {buildConversation()},
               child: SizedBox(
                 height: 80,
                 child: Card(

@@ -35,7 +35,7 @@ class _AudioplayerState extends State<Audioplayer>
 
   void initPlayer() {
     _animationIconController1 = AnimationController(
-      //vsync: this,
+      vsync: this,
       duration: Duration(milliseconds: 750),
       reverseDuration: Duration(milliseconds: 750),
     );
