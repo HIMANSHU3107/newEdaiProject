@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'facts_message.dart';
 import 'package:flutter_dialogflow/dialogflow_v2.dart';
 import 'package:new_edai_project/features/chatbot/facts_message.dart';
+import 'widgets/basicCard.dart';
+import 'widgets/carouselSelect.dart';
+import 'widgets/simple_message.dart';
 
 class FlutterFactsChatBot extends StatefulWidget {
   FlutterFactsChatBot({Key key, this.title}) : super(key: key);
@@ -48,6 +51,31 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
     );
   }
 
+  dynamic getWidgetMessage(message) {
+    TypeMessage ms = TypeMessage(message);
+    if (ms.platform == "ACTIONS_ON_GOOGLE") {
+      if (ms.type == "simpleResponses") {
+        return SimpleMessage(
+          text: message['simpleResponses']['simpleResponses'][0]
+              ['textToSpeech'],
+          name: "Bot",
+          type: false,
+        );
+      }
+      if (ms.type == "basicCard") {
+        return BasicCardWidget(card: BasicCardDialogflow(message));
+      }
+      if (ms.type == "carouselSelect") {
+        return CarouselSelectWidget(
+            carouselSelect: CarouselSelect(message),
+            clickItem: (info) {
+              print(info); // Item Click print List Keys
+            });
+      }
+    }
+    return null;
+  }
+
   void agentResponse(query) async {
     _textController.clear();
     AuthGoogle authGoogle =
@@ -56,18 +84,28 @@ class _FlutterFactsChatBotState extends State<FlutterFactsChatBot> {
     Dialogflow dialogFlow =
         Dialogflow(authGoogle: authGoogle, language: Language.english);
     AIResponse response = await dialogFlow.detectIntent(query);
+    if (response.getMessage() != null && response.getMessage() != "") {
+      Facts message = Facts(
+        text: response.getMessage() ??
+            CardDialogflow(response.getListMessage()[0]).title,
+        name: "Flutter",
+        type: false,
+      );
 
-    Facts message = Facts(
-      text: response.getMessage() ??
-          CardDialogflow(response.getListMessage()[0]).title,
-      // imageUri: CardDialogflow(response.getListMessage()[0]).imageUri ?? "",
-      name: "Flutter",
-      type: false,
-    );
-
-    setState(() {
-      messageList.insert(0, message);
-    });
+      setState(() {
+        messageList.insert(0, message);
+      });
+    } else {
+      List<dynamic> messages = response.getListMessage();
+      for (var i = 0; i < messages.length; i++) {
+        dynamic message = getWidgetMessage(messages[i]);
+        if (message != null) {
+          setState(() {
+            messageList.insert(0, message);
+          });
+        }
+      }
+    }
   }
 
   void _submitQuery(String text) {

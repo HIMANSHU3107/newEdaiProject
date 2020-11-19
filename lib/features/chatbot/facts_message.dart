@@ -37,9 +37,6 @@ class Facts extends StatelessWidget {
                     text,
                     style: TextStyle(fontSize: 18),
                   ),
-                  /*imageUri != ""
-                      ? Image.network('https://picsum.photos/250?image=9')
-                      : null,*/
                 ]),
               ),
             ),
