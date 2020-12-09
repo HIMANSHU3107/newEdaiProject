@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:new_edai_project/features/exerciseThird.dart';
+import 'package:new_edai_project/features/commonExe.dart';
+import 'package:new_edai_project/features/exerciseBrain.dart';
+//import 'package:new_edai_project/features/exerciseThird.dart';
 
 // import 'package:new_edai_project/features/audioplayer.dart';
 
@@ -18,34 +20,42 @@ class Exercise extends StatelessWidget {
             ReusableCard(
               image: 'assets/images/full_body_exer.jpg',
               cardName: 'Full Body Workout',
+              number: 0,
             ),
             ReusableCard(
               image: 'assets/images/abs_exer.jpg',
               cardName: 'Abs Workout',
+              number: 1,
             ),
             ReusableCard(
               image: 'assets/images/shoulder_exer.jpg',
               cardName: 'Shoulders workout',
+              number: 0,
             ),
             ReusableCard(
               image: 'assets/images/back_exer.jpg',
               cardName: 'Back workout',
+              number: 0,
             ),
             ReusableCard(
               image: 'assets/images/leg_exer.jpg',
               cardName: 'Legs workout',
+              number: 0,
             ),
             ReusableCard(
               image: 'assets/images/biceps_exer.jpg',
               cardName: 'Biceps workout',
+              number: 0,
             ),
             ReusableCard(
               image: 'assets/images/triceps_exer.jpg',
               cardName: 'Triceps workout',
+              number: 0,
             ),
             ReusableCard(
               image: 'assets/images/chest_exer.jpg',
               cardName: 'Chest workout',
+              number: 0,
             ),
           ],
         ),
@@ -56,10 +66,12 @@ class Exercise extends StatelessWidget {
 }
 
 class ReusableCard extends StatelessWidget {
-  ReusableCard({this.image, this.cardName});
+  ExerciseBrain exerciseBrain = ExerciseBrain();
+  ReusableCard({this.image, this.cardName, this.number});
 
   final String image;
   final String cardName;
+  final int number;
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +107,9 @@ class ReusableCard extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ExerciseThird()),
+                MaterialPageRoute(
+                    builder: (context) =>
+                        CommonExe(exerciseBrain.listofExer[number])),
               ); // Perform some action
             },
             child: const Text('START'),

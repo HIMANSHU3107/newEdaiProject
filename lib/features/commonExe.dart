@@ -1,17 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:new_edai_project/features/exerciseBrain.dart';
+import 'package:new_edai_project/features/exerciseList.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'exerciseBrain.dart';
 
 ExerciseBrain exerciseBrain = ExerciseBrain();
 
-class ExerciseThird extends StatefulWidget {
-  @override
-  _ExerciseThirdState createState() => _ExerciseThirdState();
-}
+class CommonExe extends StatelessWidget {
+  final List<ExerciseList> listofExer;
 
-class _ExerciseThirdState extends State<ExerciseThird> {
+  CommonExe(this.listofExer);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,20 +22,20 @@ class _ExerciseThirdState extends State<ExerciseThird> {
       body: Column(
         children: [
           ThirdReusableCard(
-            imageName: exerciseBrain.listofExer[0].imageURL,
-            exerciseName: exerciseBrain.listofExer[0].exerciseName,
+            imageName: listofExer[0].imageURL,
+            exerciseName: listofExer[0].exerciseName,
           ),
           ThirdReusableCard(
-            imageName: exerciseBrain.listofExer[1].imageURL,
-            exerciseName: exerciseBrain.listofExer[1].exerciseName,
+            imageName: listofExer[1].imageURL,
+            exerciseName: listofExer[1].exerciseName,
           ),
           ThirdReusableCard(
-            imageName: exerciseBrain.listofExer[2].imageURL,
-            exerciseName: exerciseBrain.listofExer[2].exerciseName,
+            imageName: listofExer[2].imageURL,
+            exerciseName: listofExer[2].exerciseName,
           ),
           ThirdReusableCard(
-            imageName: exerciseBrain.listofExer[3].imageURL,
-            exerciseName: exerciseBrain.listofExer[3].exerciseName,
+            imageName: listofExer[3].imageURL,
+            exerciseName: listofExer[3].exerciseName,
           )
         ],
       ),
