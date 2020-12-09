@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_edai_project/features/exerciseSecond.dart';
+import 'package:new_edai_project/features/exerciseThird.dart';
 
 // import 'package:new_edai_project/features/audioplayer.dart';
 
@@ -95,7 +95,7 @@ class ReusableCard extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ExerciseSecond()),
+                MaterialPageRoute(builder: (context) => ExerciseThird()),
               ); // Perform some action
             },
             child: const Text('START'),

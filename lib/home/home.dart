@@ -1,7 +1,8 @@
 //import 'package:new_edai_project/features/chatbot/chatbot.dart';
-import 'package:new_edai_project/features/excercise.dart';
+
 import 'package:new_edai_project/features/Meditation/meditation.dart';
 import 'package:flutter/material.dart';
+import 'package:new_edai_project/features/exerciseSecond.dart';
 import 'package:new_edai_project/setup/user.dart';
 import 'package:new_edai_project/features/chatbot/google_assistant.dart';
 //import 'package:kommunicate_flutter_plugin/kommunicate_flutter_plugin.dart';
@@ -52,7 +53,7 @@ class Home extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => Exercise(),
+                builder: (context) => ExerciseSecond(),
               )),
               child: SizedBox(
                 height: 80,

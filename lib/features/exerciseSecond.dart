@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_edai_project/features/exerciseThird.dart';
+import 'package:new_edai_project/features/excercise.dart';
 
 class ExerciseSecond extends StatefulWidget {
   @override
@@ -57,8 +57,8 @@ class SecondReusableCard extends StatelessWidget {
         minWidth: double.infinity,
         textColor: Color(0xff0D0620),
         onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => ExerciseThird()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Exercise()));
           // Perform some action
         },
         child: Text(

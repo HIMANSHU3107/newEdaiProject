@@ -2,8 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'exerciseBrain.dart';
 
-class ExerciseThird extends StatelessWidget {
+ExerciseBrain exerciseBrain = ExerciseBrain();
+
+class ExerciseThird extends StatefulWidget {
+  @override
+  _ExerciseThirdState createState() => _ExerciseThirdState();
+}
+
+class _ExerciseThirdState extends State<ExerciseThird> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,16 +23,20 @@ class ExerciseThird extends StatelessWidget {
       body: Column(
         children: [
           ThirdReusableCard(
-            imageName: 'assets/images/pushUp.png',
+            imageName: exerciseBrain.listofExer[0].imageURL,
+            exerciseName: exerciseBrain.listofExer[0].exerciseName,
           ),
           ThirdReusableCard(
-            imageName: 'assets/images/pushUp.png',
+            imageName: exerciseBrain.listofExer[1].imageURL,
+            exerciseName: exerciseBrain.listofExer[1].exerciseName,
           ),
           ThirdReusableCard(
-            imageName: 'assets/images/pushUp.png',
+            imageName: exerciseBrain.listofExer[2].imageURL,
+            exerciseName: exerciseBrain.listofExer[2].exerciseName,
           ),
           ThirdReusableCard(
-            imageName: 'assets/images/pushUp.png',
+            imageName: exerciseBrain.listofExer[3].imageURL,
+            exerciseName: exerciseBrain.listofExer[3].exerciseName,
           )
         ],
       ),
@@ -33,8 +45,9 @@ class ExerciseThird extends StatelessWidget {
 }
 
 class ThirdReusableCard extends StatelessWidget {
-  ThirdReusableCard({this.imageName});
+  ThirdReusableCard({this.imageName, this.exerciseName});
   final String imageName;
+  final String exerciseName;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -59,7 +72,7 @@ class ThirdReusableCard extends StatelessWidget {
                           content: Column(
                             children: [
                               Image(
-                                image: AssetImage('assets/images/pushUp.png'),
+                                image: AssetImage(imageName),
                               ),
                               Text(
                                   'Lay prone on the ground with arms supporting your body. keep your Body straight while raising and owering your body with your arms. The exercise works the chest,shoulders, triceps,back and legs.'),
@@ -91,7 +104,7 @@ class ThirdReusableCard extends StatelessWidget {
                   width: 100,
                 ),
                 Text(
-                  'PushUps',
+                  exerciseName,
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.w900,
