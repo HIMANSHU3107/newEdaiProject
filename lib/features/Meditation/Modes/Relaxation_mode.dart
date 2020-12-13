@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'appbar.dart';
+import '../appbar.dart';
 import 'ModeBody.dart';
 
-class FocusMode extends StatelessWidget {
+class RelaxationMode extends StatelessWidget {
   final List<String> swipeData = ["Sunrise", "Sunset", "Breeze", "Sunlight"];
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class FocusMode extends StatelessWidget {
           ),
         ),
         child: Container(
-          color: Color(0xffffb773).withOpacity(0.7),
+          color: Color(0xff74e9f8).withOpacity(0.7),
           child: SafeArea(
             child: Container(
               child: Column(
@@ -24,7 +24,7 @@ class FocusMode extends StatelessWidget {
                     height: 40,
                   ),
                   Appbar(swipeData),
-                  ModeBody(),
+                  ModeBody(assetImage: "assets/images/colcir.png"),
                 ],
               ),
             ),

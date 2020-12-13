@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'PromoIcons.dart';
 import 'Modes.dart';
-import 'Focus_mode.dart';
+import 'Modes/Focus_mode.dart';
+import 'Modes/Relaxation_mode.dart';
+import 'Modes/Sleep_mode.dart';
+import 'Modes/Mediation_mode.dart';
 
 class Meditation extends StatelessWidget {
   @override
@@ -10,7 +13,7 @@ class Meditation extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/back.png'),
+            image: AssetImage('assets/images/backs.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -107,7 +110,10 @@ class Meditation extends StatelessWidget {
                               modeName: "Meditation\nMode",
                               assetImage: "assets/images/colmoon.png",
                               buttonAsset: "assets/images/moon.png",
-                              openMode: null,
+                              openMode: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (ctx) => MediationMode())),
                             ),
                           ],
                         ),
@@ -117,16 +123,20 @@ class Meditation extends StatelessWidget {
                         child: Column(
                           children: [
                             Modes(
-                                background: Color(0xff74e9f8),
-                                flexSize: 6,
-                                mgTop: 30,
-                                mgLeft: 10,
-                                mgRight: 30,
-                                mgBottom: 10,
-                                modeName: "Relaxation\nMode",
-                                assetImage: "assets/images/colcir.png",
-                                buttonAsset: "assets/images/circle.png",
-                                openMode: null),
+                              background: Color(0xff74e9f8),
+                              flexSize: 6,
+                              mgTop: 30,
+                              mgLeft: 10,
+                              mgRight: 30,
+                              mgBottom: 10,
+                              modeName: "Relaxation\nMode",
+                              assetImage: "assets/images/colcir.png",
+                              buttonAsset: "assets/images/circle.png",
+                              openMode: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (ctx) => RelaxationMode())),
+                            ),
                             Modes(
                               background: Color(0xff97e37b),
                               flexSize: 4,
@@ -137,7 +147,10 @@ class Meditation extends StatelessWidget {
                               modeName: "Sleep Mode",
                               assetImage: "assets/images/coldrop.png",
                               buttonAsset: "assets/images/drop.png",
-                              openMode: null,
+                              openMode: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (ctx) => SleepMode())),
                             ),
                           ],
                         ),

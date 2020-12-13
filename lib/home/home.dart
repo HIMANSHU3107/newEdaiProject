@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:new_edai_project/features/exerciseSecond.dart';
 import 'package:new_edai_project/setup/user.dart';
 import 'package:new_edai_project/features/chatbot/google_assistant.dart';
-//import 'package:kommunicate_flutter_plugin/kommunicate_flutter_plugin.dart';
 
 class Home extends StatelessWidget {
   final AuthService _auth = AuthService();

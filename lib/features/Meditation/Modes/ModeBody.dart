@@ -3,6 +3,9 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 class ModeBody extends StatefulWidget {
+  final String assetImage;
+
+  const ModeBody({Key key, this.assetImage}) : super(key: key);
   @override
   _ModeBodyState createState() => _ModeBodyState();
 }
@@ -53,10 +56,7 @@ class _ModeBodyState extends State<ModeBody> with TickerProviderStateMixin {
       child: Stack(
         children: [
           Positioned(
-            bottom: 0,
-            right: 0,
-            child: Image.asset("assets/images/coltri.png"),
-          ),
+              bottom: 0, right: 0, child: Image.asset(widget.assetImage)),
           Container(
             width: double.infinity,
             margin: EdgeInsets.only(
@@ -120,7 +120,7 @@ class _ModeBodyState extends State<ModeBody> with TickerProviderStateMixin {
                                 isplaying = !isplaying;
                               });
                               if (issongplaying == false) {
-                                audioCache.play("audio/test_audio.mp3",
+                                audioCache.play("audio/5min.mp3",
                                     mode: PlayerMode.MEDIA_PLAYER);
                                 setState(() {
                                   issongplaying = true;
