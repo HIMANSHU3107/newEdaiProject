@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_edai_project/features/excercise.dart';
+import 'package:new_edai_project/features/yoga.dart';
 
 class ExerciseSecond extends StatefulWidget {
   @override
@@ -27,45 +28,60 @@ class _ExerciseSecondState extends State<ExerciseSecond> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SecondReusableCard(
-              exertype: 'Home Workout',
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                    side: BorderSide(color: Colors.blueGrey)),
+                color: Colors.white,
+                height: 60.0,
+                minWidth: double.infinity,
+                textColor: Color(0xff0D0620),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Exercise()));
+
+                  // Perform some action
+                },
+                child: Text(
+                  'Workout',
+                  style: TextStyle(
+                    fontSize: 24.0,
+                  ),
+                ),
+              ),
             ),
-            SecondReusableCard(
-              exertype: 'GYM Workout',
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: FlatButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                    side: BorderSide(color: Colors.blueGrey)),
+                color: Colors.white,
+                height: 60.0,
+                minWidth: double.infinity,
+                textColor: Color(0xff0D0620),
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Yoga()));
+                  // Perform some action
+                },
+                child: Text(
+                  'YOGA',
+                  style: TextStyle(
+                    fontSize: 24.0,
+                  ),
+                ),
+              ),
             ),
+            // SecondReusableCard(
+            //   exertype: 'Workout',
+            // ),
+            // SecondReusableCard(
+            //   exertype: 'YOGA',
+            // ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class SecondReusableCard extends StatelessWidget {
-  SecondReusableCard({this.exertype});
-  final String exertype;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: FlatButton(
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8.0),
-            side: BorderSide(color: Colors.blueGrey)),
-        color: Colors.white,
-        height: 60.0,
-        minWidth: double.infinity,
-        textColor: Color(0xff0D0620),
-        onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Exercise()));
-          // Perform some action
-        },
-        child: Text(
-          exertype,
-          style: TextStyle(
-            fontSize: 24.0,
-          ),
         ),
       ),
     );

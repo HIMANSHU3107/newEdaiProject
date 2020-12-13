@@ -19,25 +19,51 @@ class CommonExe extends StatelessWidget {
         title: Text('Exercise'),
       ),
       // backgroundColor: Color(0xff0D0620),
-      body: Column(
-        children: [
-          ThirdReusableCard(
-            imageName: listofExer[0].imageURL,
-            exerciseName: listofExer[0].exerciseName,
-          ),
-          ThirdReusableCard(
-            imageName: listofExer[1].imageURL,
-            exerciseName: listofExer[1].exerciseName,
-          ),
-          ThirdReusableCard(
-            imageName: listofExer[2].imageURL,
-            exerciseName: listofExer[2].exerciseName,
-          ),
-          ThirdReusableCard(
-            imageName: listofExer[3].imageURL,
-            exerciseName: listofExer[3].exerciseName,
-          )
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ThirdReusableCard(
+              imageName: listofExer[0].imageURL,
+              exerciseName: listofExer[0].exerciseName,
+            ),
+            ThirdReusableCard(
+              imageName: listofExer[1].imageURL,
+              exerciseName: listofExer[1].exerciseName,
+            ),
+            ThirdReusableCard(
+              imageName: listofExer[2].imageURL,
+              exerciseName: listofExer[2].exerciseName,
+            ),
+            ThirdReusableCard(
+              imageName: listofExer[3].imageURL,
+              exerciseName: listofExer[3].exerciseName,
+            ),
+            ThirdReusableCard(
+              imageName: listofExer[4].imageURL,
+              exerciseName: listofExer[4].exerciseName,
+            ),
+            ThirdReusableCard(
+              imageName: listofExer[5].imageURL,
+              exerciseName: listofExer[5].exerciseName,
+            ),
+            ThirdReusableCard(
+              imageName: listofExer[6].imageURL,
+              exerciseName: listofExer[6].exerciseName,
+            ),
+            // ThirdReusableCard(
+            //   imageName: listofExer[4].imageURL,
+            //   exerciseName: listofExer[4].exerciseName,
+            // ),
+            // ThirdReusableCard(
+            //   imageName: listofExer[5].imageURL,
+            //   exerciseName: listofExer[5].exerciseName,
+            // ),
+            // ThirdReusableCard(
+            //   imageName: listofExer[6].imageURL,
+            //   exerciseName: listofExer[6].exerciseName,
+            // ),
+          ],
+        ),
       ),
     );
   }

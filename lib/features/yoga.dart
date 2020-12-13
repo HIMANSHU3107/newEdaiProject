@@ -1,61 +1,65 @@
 import 'package:flutter/material.dart';
-import 'package:new_edai_project/features/commonExe.dart';
 import 'package:new_edai_project/features/exerciseBrain.dart';
 //import 'package:new_edai_project/features/exerciseThird.dart';
 
 // import 'package:new_edai_project/features/audioplayer.dart';
 
-class Exercise extends StatelessWidget {
+class Yoga extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff0D0620),
-        title: Text('Exercise'),
+        title: Text('YOGA'),
       ),
-      backgroundColor: Color(0xff0D0620),
+      backgroundColor: Color(0xff34495E),
       body: SingleChildScrollView(
         child: Column(
           children: [
             ReusableCard(
-              image: 'assets/images/full_body_exer.jpg',
-              cardName: 'Full Body Workout',
+              image: 'assets/images/urdhva-Hastansana.gif',
+              cardName: 'Urdhva Hastansana',
               number: 0,
             ),
             ReusableCard(
-              image: 'assets/images/abs_exer.jpg',
-              cardName: 'Abs Workout',
+              image: 'assets/images/uttanasana.gif',
+              cardName: 'Uttanasana',
               number: 1,
             ),
             ReusableCard(
-              image: 'assets/images/shoulder_exer.jpg',
-              cardName: 'Shoulders workout',
+              image: 'assets/images/Malasana.gif',
+              cardName: 'Malasana',
               number: 2,
             ),
             ReusableCard(
-              image: 'assets/images/back_exer.jpg',
-              cardName: 'Back workout',
+              image: 'assets/images/LungeYoga.gif',
+              cardName: 'Lunge',
               number: 3,
             ),
             ReusableCard(
-              image: 'assets/images/leg_exer.jpg',
-              cardName: 'Legs workout',
+              image: 'assets/images/yogaPlank.webp',
+              cardName: 'Plank',
               number: 4,
             ),
             ReusableCard(
-              image: 'assets/images/biceps_exer.jpg',
-              cardName: 'Biceps workout',
+              image: 'assets/images/Dandasana.webp',
+              cardName: 'Dandasana',
               number: 5,
             ),
             ReusableCard(
-              image: 'assets/images/triceps_exer.jpg',
-              cardName: 'Triceps workout',
+              image: 'assets/images/Paschimottanasana.webp',
+              cardName: 'Paschimottanasana',
               number: 6,
             ),
             ReusableCard(
-              image: 'assets/images/chest_exer.jpg',
-              cardName: 'Chest workout',
+              image: 'assets/images/JanuSirsasana.webp',
+              cardName: 'Janu Sirsasana',
               number: 7,
+            ),
+            ReusableCard(
+              image: 'assets/images/AnandaBalasana.webp',
+              cardName: 'Ananda Balasana',
+              number: 8,
             ),
           ],
         ),
@@ -89,7 +93,7 @@ class ReusableCard extends StatelessWidget {
                 image,
                 // 'assets/images/full_body_exer.jpg',
                 fit: BoxFit.fitWidth,
-                height: 200,
+                height: 300,
                 width: double.infinity,
               ),
               Text(
@@ -101,19 +105,6 @@ class ReusableCard extends StatelessWidget {
               ),
             ],
           )),
-          FlatButton(
-            color: Colors.white,
-            textColor: Color(0xff392850),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) =>
-                        CommonExe(exerciseBrain.listofExer[number])),
-              ); // Perform some action
-            },
-            child: const Text('START'),
-          ),
         ],
       ),
     );
