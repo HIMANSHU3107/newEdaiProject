@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'PromoIcons.dart';
 import 'Modes.dart';
-import 'Modes/Focus_mode.dart';
-import 'Modes/Relaxation_mode.dart';
-import 'Modes/Sleep_mode.dart';
-import 'Modes/Mediation_mode.dart';
+import 'Modes/Spiritual_Mode.dart';
+import 'Modes/Breathing_Exercise.dart';
+import 'Modes/Nature.dart';
+import 'Modes/Before_Sleep.dart';
 
 class Meditation extends StatelessWidget {
   @override
@@ -92,13 +92,13 @@ class Meditation extends StatelessWidget {
                               mgLeft: 30,
                               mgRight: 10,
                               mgBottom: 10,
-                              modeName: "Focus Mode",
+                              modeName: "Spiritual Mode",
                               assetImage: "assets/images/coltri.png",
                               buttonAsset: "assets/images/triangle.png",
                               openMode: () => Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (ctx) => FocusMode())),
+                                      builder: (ctx) => SpiritualMode())),
                             ),
                             Modes(
                               background: Color(0xffcf8cf9),
@@ -107,13 +107,13 @@ class Meditation extends StatelessWidget {
                               mgLeft: 30,
                               mgRight: 10,
                               mgBottom: 30,
-                              modeName: "Meditation\nMode",
+                              modeName: "Before Sleep",
                               assetImage: "assets/images/colmoon.png",
                               buttonAsset: "assets/images/moon.png",
                               openMode: () => Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (ctx) => MediationMode())),
+                                      builder: (ctx) => BeforeSleep())),
                             ),
                           ],
                         ),
@@ -129,13 +129,13 @@ class Meditation extends StatelessWidget {
                               mgLeft: 10,
                               mgRight: 30,
                               mgBottom: 10,
-                              modeName: "Relaxation\nMode",
+                              modeName: "Breathing Exercise",
                               assetImage: "assets/images/colcir.png",
                               buttonAsset: "assets/images/circle.png",
                               openMode: () => Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (ctx) => RelaxationMode())),
+                                      builder: (ctx) => BreathingExercise())),
                             ),
                             Modes(
                               background: Color(0xff97e37b),
@@ -144,13 +144,13 @@ class Meditation extends StatelessWidget {
                               mgLeft: 10,
                               mgRight: 30,
                               mgBottom: 30,
-                              modeName: "Sleep Mode",
+                              modeName: "Nature",
                               assetImage: "assets/images/coldrop.png",
                               buttonAsset: "assets/images/drop.png",
                               openMode: () => Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (ctx) => SleepMode())),
+                                      builder: (ctx) => Nature())),
                             ),
                           ],
                         ),

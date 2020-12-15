@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../appbar.dart';
 import 'ModeBody.dart';
 
-class SleepMode extends StatelessWidget {
+class Nature extends StatelessWidget {
   final List<String> swipeData = ["Sunrise", "Sunset", "Breeze", "Sunlight"];
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class SleepMode extends StatelessWidget {
                     height: 40,
                   ),
                   Appbar(swipeData),
-                  ModeBody(assetImage: "assets/images/coldrop.png"),
+                  ModeBody(assetImage: "assets/images/coldrop.png",audioFile: "audio/Nature.mp3"),
                 ],
               ),
             ),

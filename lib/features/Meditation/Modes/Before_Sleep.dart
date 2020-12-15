@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../appbar.dart';
 import 'ModeBody.dart';
 
-class RelaxationMode extends StatelessWidget {
+class BeforeSleep extends StatelessWidget {
   final List<String> swipeData = ["Sunrise", "Sunset", "Breeze", "Sunlight"];
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class RelaxationMode extends StatelessWidget {
           ),
         ),
         child: Container(
-          color: Color(0xff74e9f8).withOpacity(0.7),
+          color: Color(0xffcf8cf9).withOpacity(0.7),
           child: SafeArea(
             child: Container(
               child: Column(
@@ -24,7 +24,8 @@ class RelaxationMode extends StatelessWidget {
                     height: 40,
                   ),
                   Appbar(swipeData),
-                  ModeBody(assetImage: "assets/images/colcir.png"),
+                  ModeBody(
+                      assetImage: "assets/images/colmoon.png",audioFile: "audio/Sleep.mp3"),
                 ],
               ),
             ),

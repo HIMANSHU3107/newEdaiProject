@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 class ModeBody extends StatefulWidget {
   final String assetImage;
+  final String audioFile;
 
-  const ModeBody({Key key, this.assetImage}) : super(key: key);
+  const ModeBody({Key key, this.assetImage, this.audioFile}) : super(key: key);
   @override
   _ModeBodyState createState() => _ModeBodyState();
 }
@@ -120,7 +121,7 @@ class _ModeBodyState extends State<ModeBody> with TickerProviderStateMixin {
                                 isplaying = !isplaying;
                               });
                               if (issongplaying == false) {
-                                audioCache.play("audio/5min.mp3",
+                                audioCache.play(widget.audioFile,
                                     mode: PlayerMode.MEDIA_PLAYER);
                                 setState(() {
                                   issongplaying = true;

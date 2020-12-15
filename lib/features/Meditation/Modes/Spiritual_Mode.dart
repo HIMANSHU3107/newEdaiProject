@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../appbar.dart';
 import 'ModeBody.dart';
 
-class FocusMode extends StatelessWidget {
+class SpiritualMode extends StatelessWidget {
   final List<String> swipeData = ["Sunrise", "Sunset", "Breeze", "Sunlight"];
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,9 @@ class FocusMode extends StatelessWidget {
                     height: 40,
                   ),
                   Appbar(swipeData),
-                  ModeBody(assetImage: "assets/images/coltri.png"),
+                  ModeBody(
+                      assetImage: "assets/images/coltri.png",
+                      audioFile: "audio/Om.mp3"),
                 ],
               ),
             ),
