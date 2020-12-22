@@ -47,7 +47,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
     );
   }
 
-  dynamic getWidgetMessage(message) {
+  dynamic getWidgetMessage(message, intentName) {
     TypeMessage ms = TypeMessage(message);
     if (ms.platform == "ACTIONS_ON_GOOGLE") {
       if (ms.type == "simpleResponses") {
@@ -64,6 +64,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
       if (ms.type == "carouselSelect") {
         return CarouselSelectWidget(
             carouselSelect: CarouselSelect(message),
+            intentName: intentName,
             clickItem: (info) {
               print(info); // Item Click print List Keys
             });
@@ -80,6 +81,10 @@ class _GoogleAssistant extends State<GoogleAssistant> {
     Dialogflow dialogflow =
         Dialogflow(authGoogle: authGoogle, language: Language.english);
     AIResponse response = await dialogflow.detectIntent(query);
+
+    String intentName = response.queryResult.intent.displayName;
+    debugPrint('intentName is : ' + intentName);
+
     if (response.getMessage() != null && response.getMessage() != "") {
       SimpleMessage message = new SimpleMessage(
         text: response.getMessage(),
@@ -92,7 +97,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
     } else {
       List<dynamic> messages = response.getListMessage();
       for (var i = 0; i < messages.length; i++) {
-        dynamic message = getWidgetMessage(messages[i]);
+        dynamic message = getWidgetMessage(messages[i], intentName);
         if (message != null) {
           setState(() {
             _messages.insert(0, message);
@@ -118,6 +123,189 @@ class _GoogleAssistant extends State<GoogleAssistant> {
   @override
   Widget build(BuildContext context) {
     this.buildContext = context;
+    Widget tagList = Container(
+      color: Colors.transparent,
+      height: 50.0,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          Row(
+            // mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            // crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(
+                width: 20,
+              ),
+              ActionChip(
+                label: Text('Hi!',
+                    style: TextStyle(
+                      color: Color(0xFF1976D2),
+                      fontFamily: 'Montserrat',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1,
+                    )),
+                onPressed: () {
+                  _handleSubmitted('Hi');
+                },
+                backgroundColor: Colors.transparent,
+                shape: StadiumBorder(
+                  side: BorderSide(
+                    width: 2,
+                    color: Color(0xFF1976D2),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              ActionChip(
+                label: Text('Calculate BMI',
+                    style: TextStyle(
+                      color: Color(0xFF1976D2),
+                      fontFamily: 'Montserrat',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1,
+                    )),
+                onPressed: () {
+                  _handleSubmitted('Calculate BMI');
+                },
+                backgroundColor: Colors.transparent,
+                shape: StadiumBorder(
+                  side: BorderSide(
+                    width: 2,
+                    color: Color(0xFF1976D2),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              ActionChip(
+                label: Text('BreakFast',
+                    style: TextStyle(
+                      color: Color(0xFF1976D2),
+                      fontFamily: 'Montserrat',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1,
+                    )),
+                onPressed: () {
+                  _handleSubmitted('BreakFast');
+                },
+                backgroundColor: Colors.transparent,
+                shape: StadiumBorder(
+                  side: BorderSide(
+                    width: 2,
+                    color: Color(0xFF1976D2),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              ActionChip(
+                label: Text('Shoulders Workout',
+                    style: TextStyle(
+                      color: Color(0xFF1976D2),
+                      fontFamily: 'Montserrat',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1,
+                    )),
+                onPressed: () {
+                  _handleSubmitted('Shoulders Workout');
+                  // update board with selection
+                },
+                backgroundColor: Colors.transparent,
+                shape: StadiumBorder(
+                  side: BorderSide(
+                    width: 2,
+                    color: Color(0xFF1976D2),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              ActionChip(
+                label: Text('Abs',
+                    style: TextStyle(
+                      color: Color(0xFF1976D2),
+                      fontFamily: 'Montserrat',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1,
+                    )),
+                onPressed: () {
+                  _handleSubmitted('Abs Workout');
+                  // update board with selection
+                },
+                backgroundColor: Colors.transparent,
+                shape: StadiumBorder(
+                  side: BorderSide(
+                    width: 2,
+                    color: Color(0xFF1976D2),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              ActionChip(
+                label: Text('Tag1',
+                    style: TextStyle(
+                      color: Color(0xFF1976D2),
+                      fontFamily: 'Montserrat',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1,
+                    )),
+                onPressed: () {
+                  // update board with selection
+                },
+                backgroundColor: Colors.transparent,
+                shape: StadiumBorder(
+                  side: BorderSide(
+                    width: 2,
+                    color: Color(0xFF1976D2),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              ActionChip(
+                label: Text('Tag1',
+                    style: TextStyle(
+                      color: Color(0xFF1976D2),
+                      fontFamily: 'Montserrat',
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1,
+                    )),
+                onPressed: () {
+                  // update board with selection
+                },
+                backgroundColor: Colors.transparent,
+                shape: StadiumBorder(
+                  side: BorderSide(
+                    width: 2,
+                    color: Color(0xFF1976D2),
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+
     return new Scaffold(
       backgroundColor: Color(0xf4f4f4f4f4),
       appBar: new AppBar(
@@ -134,6 +322,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
           itemCount: _messages.length,
         )),
         new Divider(height: 1.0),
+        tagList,
         new Container(
           decoration: new BoxDecoration(color: Theme.of(context).cardColor),
           child: _buildTextComposer(),

@@ -37,6 +37,7 @@ dependencies:
   flutter_dialogflow: ^0.1.0
   provider: ^4.3.2+2
   kommunicate_flutter_plugin: ^1.1.0
+  collection: ^1.14.13
   
 
 dev_dependencies:

@@ -70,7 +70,7 @@ class Yoga extends StatelessWidget {
 }
 
 class ReusableCard extends StatelessWidget {
-  ExerciseBrain exerciseBrain = ExerciseBrain();
+  final ExerciseBrain exerciseBrain = ExerciseBrain();
   ReusableCard({this.image, this.cardName, this.number});
 
   final String image;
