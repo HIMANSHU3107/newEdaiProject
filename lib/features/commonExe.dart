@@ -25,30 +25,44 @@ class CommonExe extends StatelessWidget {
             ThirdReusableCard(
               imageName: listofExer[0].imageURL,
               exerciseName: listofExer[0].exerciseName,
+              aboutImage: listofExer[0].aboutExercise,
+              utubeLink: listofExer[0].youtubeURL,
             ),
             ThirdReusableCard(
               imageName: listofExer[1].imageURL,
               exerciseName: listofExer[1].exerciseName,
+              aboutImage: listofExer[1].aboutExercise,
+              utubeLink: listofExer[1].youtubeURL,
             ),
             ThirdReusableCard(
               imageName: listofExer[2].imageURL,
               exerciseName: listofExer[2].exerciseName,
+              aboutImage: listofExer[2].aboutExercise,
+              utubeLink: listofExer[2].youtubeURL,
             ),
             ThirdReusableCard(
               imageName: listofExer[3].imageURL,
               exerciseName: listofExer[3].exerciseName,
+              aboutImage: listofExer[3].aboutExercise,
+              utubeLink: listofExer[3].youtubeURL,
             ),
             ThirdReusableCard(
               imageName: listofExer[4].imageURL,
               exerciseName: listofExer[4].exerciseName,
+              aboutImage: listofExer[4].aboutExercise,
+              utubeLink: listofExer[4].youtubeURL,
             ),
             ThirdReusableCard(
               imageName: listofExer[5].imageURL,
               exerciseName: listofExer[5].exerciseName,
+              aboutImage: listofExer[5].aboutExercise,
+              utubeLink: listofExer[5].youtubeURL,
             ),
             ThirdReusableCard(
               imageName: listofExer[6].imageURL,
               exerciseName: listofExer[6].exerciseName,
+              aboutImage: listofExer[6].aboutExercise,
+              utubeLink: listofExer[6].youtubeURL,
             ),
             // ThirdReusableCard(
             //   imageName: listofExer[4].imageURL,
@@ -70,9 +84,12 @@ class CommonExe extends StatelessWidget {
 }
 
 class ThirdReusableCard extends StatelessWidget {
-  ThirdReusableCard({this.imageName, this.exerciseName});
+  ThirdReusableCard(
+      {this.imageName, this.exerciseName, this.aboutImage, this.utubeLink});
   final String imageName;
   final String exerciseName;
+  final String aboutImage;
+  final String utubeLink;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -99,16 +116,14 @@ class ThirdReusableCard extends StatelessWidget {
                               Image(
                                 image: AssetImage(imageName),
                               ),
-                              Text(
-                                  'Lay prone on the ground with arms supporting your body. keep your Body straight while raising and owering your body with your arms. The exercise works the chest,shoulders, triceps,back and legs.'),
+                              Text(aboutImage),
                               RichText(
                                 text: TextSpan(
                                     style: TextStyle(color: Colors.blue),
                                     text: 'click here to see the video',
                                     recognizer: TapGestureRecognizer()
                                       ..onTap = () async {
-                                        var url =
-                                            'https://youtu.be/bt5b9x9N0KU';
+                                        var url = utubeLink;
                                         if (await canLaunch(url)) {
                                           await launch(url);
                                         } else {
