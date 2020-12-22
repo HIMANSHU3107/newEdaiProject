@@ -77,10 +77,10 @@ class _ModeBodyState extends State<ModeBody> with TickerProviderStateMixin {
                             child: Image.asset("assets/images/trithin.png"),
                           ),
                           Positioned(
-                            top: 50,
-                            left: 40,
+                            top: 55,
+                            left: 35,
                             child: Text(
-                              "30",
+                              "${_position.inSeconds.toDouble()}",
                               style: TextStyle(
                                 fontFamily: "Josefin",
                                 fontSize: 30,
@@ -94,7 +94,8 @@ class _ModeBodyState extends State<ModeBody> with TickerProviderStateMixin {
                         height: 20,
                       ),
                       Text(
-                        "30 min",
+                        "${(_duration.inSeconds.toDouble() / 60).toStringAsFixed(2)}" +
+                            " Min",
                         style: TextStyle(
                           fontFamily: "Josefin",
                           fontSize: 25,
