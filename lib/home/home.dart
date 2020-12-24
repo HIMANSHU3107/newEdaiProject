@@ -3,6 +3,7 @@
 import 'package:new_edai_project/features/Meditation/meditation.dart';
 import 'package:flutter/material.dart';
 import 'package:new_edai_project/features/exerciseSecond.dart';
+import 'package:new_edai_project/home/profile.dart';
 import 'package:new_edai_project/setup/user.dart';
 import 'package:new_edai_project/features/chatbot/google_assistant.dart';
 
@@ -29,15 +30,15 @@ class Home extends StatelessWidget {
           automaticallyImplyLeading: false,
           actions: [
             FlatButton.icon(
-                onPressed: () async {
-                  await _auth.signOut();
-                },
+                onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Profile(),
+                    )),
                 icon: Icon(
                   Icons.person,
                   color: Colors.white,
                 ),
                 label: Text(
-                  'Logout',
+                  'Profile',
                   style: TextStyle(color: Colors.white),
                 ))
           ],
