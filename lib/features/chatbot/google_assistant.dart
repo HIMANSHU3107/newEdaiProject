@@ -143,9 +143,9 @@ class _GoogleAssistant extends State<GoogleAssistant> {
                       color: Color(0xFF1976D2),
                       fontFamily: 'Montserrat',
                       fontSize: 16,
-                      fontWeight: FontWeight.w600,
                       letterSpacing: 1,
                     )),
+                elevation: 6,
                 onPressed: () {
                   _handleSubmitted('Hi');
                 },
@@ -161,12 +161,12 @@ class _GoogleAssistant extends State<GoogleAssistant> {
                 width: 20,
               ),
               ActionChip(
+                elevation: 6,
                 label: Text('Calculate BMI',
                     style: TextStyle(
                       color: Color(0xFF1976D2),
                       fontFamily: 'Montserrat',
                       fontSize: 16,
-                      fontWeight: FontWeight.w600,
                       letterSpacing: 1,
                     )),
                 onPressed: () {
@@ -184,12 +184,12 @@ class _GoogleAssistant extends State<GoogleAssistant> {
                 width: 20,
               ),
               ActionChip(
+                elevation: 6,
                 label: Text('BreakFast',
                     style: TextStyle(
                       color: Color(0xFF1976D2),
                       fontFamily: 'Montserrat',
                       fontSize: 16,
-                      fontWeight: FontWeight.w600,
                       letterSpacing: 1,
                     )),
                 onPressed: () {
@@ -207,12 +207,12 @@ class _GoogleAssistant extends State<GoogleAssistant> {
                 width: 20,
               ),
               ActionChip(
+                elevation: 6,
                 label: Text('Shoulders Workout',
                     style: TextStyle(
                       color: Color(0xFF1976D2),
                       fontFamily: 'Montserrat',
                       fontSize: 16,
-                      fontWeight: FontWeight.w600,
                       letterSpacing: 1,
                     )),
                 onPressed: () {
@@ -231,6 +231,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
                 width: 20,
               ),
               ActionChip(
+                elevation: 6,
                 label: Text('Abs',
                     style: TextStyle(
                       color: Color(0xFF1976D2),
@@ -255,6 +256,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
                 width: 20,
               ),
               ActionChip(
+                elevation: 6,
                 label: Text('Tag1',
                     style: TextStyle(
                       color: Color(0xFF1976D2),

@@ -170,6 +170,28 @@ class Home extends StatelessWidget {
               ),
             ),
           ],
+        ),
+        floatingActionButton: Container(
+          width: 100,
+          height: 70,
+          child: SizedBox(
+            child: FloatingActionButton(
+              materialTapTargetSize: MaterialTapTargetSize.padded,
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => GoogleAssistant(), //Chatbot(),
+                ));
+              },
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(40),
+                  child: Image(
+                    image: AssetImage('assets/images/chatbot.jpg'),
+                    height: 40,
+                  )),
+              backgroundColor: Colors.purple,
+              elevation: 10,
+            ),
+          ),
         ));
   }
 }

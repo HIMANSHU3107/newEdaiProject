@@ -6,13 +6,13 @@ class ExerciseBrain {
       ExerciseList(
           img: 'assets/images/pushUp.gif',
           abt:
-              'Lay prone on the ground with arms supporting your body. keep your Body straight while raising and owering your body with your arms. The exercise works the chest,shoulders, triceps,back and legs.',
+              '\n1.Lay prone on the ground with arms supporting your body.\n\n 2. Keep your Body straight while raising and owering your body with your arms.\n\n3.The exercise works the chest,shoulders, triceps,back and legs.\n\n',
           utube: 'https://youtu.be/bt5b9x9N0KU',
           name: 'PushUps'),
       ExerciseList(
           img: 'assets/images/jumpingJacks.gif',
           abt:
-              'Begin by standing with your legs straight and your arms to your sides. Jump up and spread your feet beyond hip-width apart while bringing your arms above your head, nearly touching. Jump again, lowering your arms and bringing your legs together. Return to your starting position..',
+              '\n1.Begin by standing with your legs straight and your arms to your sides.\n\n2. Jump up and spread your feet beyond hip-width apart while bringing your arms above your head, nearly touching.\n\n3. Jump again, lowering your arms and bringing your legs together.\n\n4. Return to your starting position..\n\n',
           utube: 'https://youtu.be/c4DAnQ6DtF8',
           name: 'Jumping Jacks'),
       ExerciseList(
@@ -56,8 +56,8 @@ class ExerciseBrain {
       ExerciseList(
           img: 'assets/images/jumpingJacks.gif',
           abt:
-              'Lay prone on the ground with arms supporting your body. keep your Body straight while raising and owering your body with your arms. The exercise works the chest,shoulders, triceps,back and legs.',
-          utube: 'https://youtu.be/bt5b9x9N0KU',
+              '\n1.Begin by standing with your legs straight and your arms to your sides.\n\n2. Jump up and spread your feet beyond hip-width apart while bringing your arms above your head, nearly touching.\n\n3. Jump again, lowering your arms and bringing your legs together.\n\n4. Return to your starting position..\n\n',
+          utube: 'https://youtu.be/c4DAnQ6DtF8',
           name: 'Jumping Jacks'),
       ExerciseList(
           img: 'assets/images/abcrunches.gif',
@@ -100,7 +100,7 @@ class ExerciseBrain {
       ExerciseList(
           img: 'assets/images/jumpingJacks.gif',
           abt:
-              'Begin by standing with your legs straight and your arms to your sides. Jump up and spread your feet beyond hip-width apart while bringing your arms above your head, nearly touching. Jump again, lowering your arms and bringing your legs together. Return to your starting position.',
+              '\n1.Begin by standing with your legs straight and your arms to your sides.\n\n2. Jump up and spread your feet beyond hip-width apart while bringing your arms above your head, nearly touching.\n\n3. Jump again, lowering your arms and bringing your legs together.\n\n4. Return to your starting position..\n\n',
           utube: 'https://youtu.be/c4DAnQ6DtF8',
           name: 'Jumping Jacks'),
       ExerciseList(
@@ -140,8 +140,8 @@ class ExerciseBrain {
       ExerciseList(
           img: 'assets/images/jumpingJacks.gif',
           abt:
-              'Begin by standing with your legs straight and your arms to your sides. Jump up and spread your feet beyond hip-width apart while bringing your arms above your head, nearly touching. Jump again, lowering your arms and bringing your legs together. Return to your starting position',
-          utube: 'https://youtu.be/iSSAk4XCsRA',
+              '\n1.Begin by standing with your legs straight and your arms to your sides.\n\n2. Jump up and spread your feet beyond hip-width apart while bringing your arms above your head, nearly touching.\n\n3. Jump again, lowering your arms and bringing your legs together.\n\n4. Return to your starting position..\n\n',
+          utube: 'https://youtu.be/c4DAnQ6DtF8',
           name: 'Jumping Jacks'),
       ExerciseList(
           img: 'assets/images/Incline-Push-Up.gif',
