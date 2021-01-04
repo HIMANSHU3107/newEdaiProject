@@ -56,7 +56,7 @@ class Home extends StatelessWidget {
                 builder: (context) => ExerciseSecond(),
               )),
               child: SizedBox(
-                height: 80,
+                height: 120,
                 child: Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
@@ -66,21 +66,21 @@ class Home extends StatelessWidget {
                   child: Stack(
                     children: <Widget>[
                       Container(
-                        margin: EdgeInsets.only(left: 60, top: 10),
+                        margin: EdgeInsets.only(left: 50, top: 22),
                         child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
                             child: Image(
                               image: AssetImage('assets/images/exercise.png'),
-                              height: 60,
+                              height: 80,
                             )),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 28, left: 230),
+                        margin: EdgeInsets.only(top: 40, left: 200),
                         child: Text('Exercise',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 22.0,
+                                fontSize: 30.0,
                                 fontWeight: FontWeight.bold)),
                       )
                     ],
@@ -89,14 +89,14 @@ class Home extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 40,
             ),
             GestureDetector(
               onTap: () => Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => Meditation(),
               )),
               child: SizedBox(
-                height: 80,
+                height: 120,
                 child: Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
@@ -106,70 +106,30 @@ class Home extends StatelessWidget {
                   child: Stack(
                     children: <Widget>[
                       Container(
-                        margin: EdgeInsets.only(left: 60, top: 10),
+                        margin: EdgeInsets.only(left: 60, top: 22),
                         child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
                             child: Image(
                               image: AssetImage('assets/images/meditation.png'),
-                              height: 60,
+                              height: 80,
                             )),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 28, left: 230),
+                        margin: EdgeInsets.only(top: 40, left: 200),
                         child: Text('Meditation',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 22.0,
+                                fontSize: 30.0,
                                 fontWeight: FontWeight.bold)),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            GestureDetector(
-              onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => GoogleAssistant(), //Chatbot(),
-              )),
-              //onTap: () => {buildConversation()},
-              child: SizedBox(
-                height: 80,
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  margin: new EdgeInsets.symmetric(horizontal: 10),
-                  elevation: 24,
-                  color: Color(0xff453658),
-                  child: Stack(
-                    children: <Widget>[
-                      Container(
-                        margin: EdgeInsets.only(left: 60, top: 10),
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Image(
-                              image: AssetImage('assets/images/chatbot.jpg'),
-                              height: 60,
-                            )),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(top: 28, left: 230),
-                        child: Text('Chat-Bot',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 22.0,
-                                fontWeight: FontWeight.bold)),
-                      )
                     ],
                   ),
                 ),
               ),
             ),
-          ],
+        
+          ], 
         ),
         floatingActionButton: Container(
           width: 100,
