@@ -75,12 +75,12 @@ class Home extends StatelessWidget {
                             )),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 40, left: 200),
+                        margin: EdgeInsets.only(top: 40, left: 180),
                         child: Text('Exercise',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 30.0,
+                                fontSize: 25.0,
                                 fontWeight: FontWeight.bold)),
                       )
                     ],
@@ -115,12 +115,12 @@ class Home extends StatelessWidget {
                             )),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 40, left: 200),
+                        margin: EdgeInsets.only(top: 40, left: 180),
                         child: Text('Meditation',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 30.0,
+                                fontSize: 25.0,
                                 fontWeight: FontWeight.bold)),
                       ),
                     ],
@@ -128,8 +128,7 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-        
-          ], 
+          ],
         ),
         floatingActionButton: Container(
           width: 100,

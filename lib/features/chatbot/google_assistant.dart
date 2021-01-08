@@ -257,7 +257,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
               ),
               ActionChip(
                 elevation: 6,
-                label: Text('Tag1',
+                label: Text('High Protein Foods',
                     style: TextStyle(
                       color: Color(0xFF1976D2),
                       fontFamily: 'Montserrat',
@@ -266,7 +266,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
                       letterSpacing: 1,
                     )),
                 onPressed: () {
-                  // update board with selection
+                  _handleSubmitted('High Protein Foods');
                 },
                 backgroundColor: Colors.transparent,
                 shape: StadiumBorder(
@@ -280,7 +280,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
                 width: 20,
               ),
               ActionChip(
-                label: Text('Tag1',
+                label: Text('Schedule Personal Trainer',
                     style: TextStyle(
                       color: Color(0xFF1976D2),
                       fontFamily: 'Montserrat',
@@ -289,7 +289,7 @@ class _GoogleAssistant extends State<GoogleAssistant> {
                       letterSpacing: 1,
                     )),
                 onPressed: () {
-                  // update board with selection
+                  _handleSubmitted('Schedule a Personal Trainer');
                 },
                 backgroundColor: Colors.transparent,
                 shape: StadiumBorder(
