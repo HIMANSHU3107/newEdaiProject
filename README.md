@@ -1,5 +1,5 @@
 <h1>HOME WORKOUT APP</h1>
-<h2> Getting Started </h2>
+
 <h2>How to Use </h2>
 
 **Step 1:**
