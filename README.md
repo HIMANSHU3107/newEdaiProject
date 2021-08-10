@@ -1,4 +1,13 @@
 <h1>HOME WORKOUT APP</h1>
+<h3>Overview</h3>
+<p>
+ <ul>
+  <li>Exercise Divided into Categories with each exercise having complete information and youtube link.</li>
+  <li>Meditation: Has music divided into categories to bring harmony between mind and body</li>
+  <li>Yoga: Has different yoga exercises(activity that increases your flexibility, strengthens your muscles, centers your thoughts, and relaxes and calms you.)</li>
+  <li>Chat-Bot: For the users to conversate for Exercise.</li>
+  <li>.Diet Plan: Calculating the BMI index reflects the diet plan including statistical plotting for the calories burned.</li>
+  </ul>
 <p float='left'>
 <img src="https://user-images.githubusercontent.com/55937303/128823295-cab07a33-d235-44c9-8894-348fb0cb34d4.jpg" width="220">
 <img src="https://user-images.githubusercontent.com/55937303/128823328-3acad55b-fad0-4993-bb3d-42c5a2b1879b.jpg" width="220">
