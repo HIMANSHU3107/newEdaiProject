@@ -1,4 +1,4 @@
-#Home Workout App
+<h1> Home Workout App</h1>
 <img src="https://user-images.githubusercontent.com/55937303/128823295-cab07a33-d235-44c9-8894-348fb0cb34d4.jpg" width="220">
 <img src="https://user-images.githubusercontent.com/55937303/128823328-3acad55b-fad0-4993-bb3d-42c5a2b1879b.jpg" width="220">
 <img src="https://user-images.githubusercontent.com/55937303/128823350-42951fd4-2e2e-41b1-8564-be3c79c3be36.jpg" width="220">
