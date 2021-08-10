@@ -35,7 +35,7 @@ flutter pub get
  <li>Dart</li>
  <li>Firebase </li>
  <li> Dailogflow cloud platform </li>
- <li>Nodejs</li>
+
  
  </ul>
 <p>
