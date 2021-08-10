@@ -1,4 +1,5 @@
 <h1>HOME WORKOUT APP</h1>
+<p float='left'>
 <img src="https://user-images.githubusercontent.com/55937303/128823295-cab07a33-d235-44c9-8894-348fb0cb34d4.jpg" width="220">
 <img src="https://user-images.githubusercontent.com/55937303/128823328-3acad55b-fad0-4993-bb3d-42c5a2b1879b.jpg" width="220">
 <img src="https://user-images.githubusercontent.com/55937303/128823350-42951fd4-2e2e-41b1-8564-be3c79c3be36.jpg" width="220">
@@ -11,3 +12,4 @@
 <img src="https://user-images.githubusercontent.com/55937303/128823473-434aca9a-de1b-4206-9537-460b1c21a03e.jpg" width="220">
 <img src="https://user-images.githubusercontent.com/55937303/128823491-ea6055cd-64c3-4e0e-bde6-2bfce39ca803.jpg" width="220">
 <img src="https://user-images.githubusercontent.com/55937303/128823502-c55c6429-2201-4071-931e-021902238ab9.jpg" width="220">
+ </p> 
